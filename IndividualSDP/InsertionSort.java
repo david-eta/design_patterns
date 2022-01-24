@@ -15,15 +15,16 @@ public class InsertionSort implements SortBehavior {
      */
     public ArrayList<String> sort(ArrayList<String> list) { // https://stackoverflow.com/questions/35097227/insertion-sort-java-algorithm-in-an-arraylist-string 
 
-        for(int i = 1; i < list.size(); i++)  {
+        ArrayList<String> temp = list;
+        for(int i = 1; i < temp.size(); i++)  {
             int j = i - 1;
         
-            while (j >= 0 && list.get(i).compareTo(list.get(j)) < 0) {
-                list.set(j+1, list.get(j));
+            while (j >= 0 && temp.get(i).compareTo(temp.get(j)) < 0) {
+                temp.set(j+1, temp.get(j));
                 j--;
             }
-            list.set(j+1, list.get(i));
+            temp.set(j+1, temp.get(i));
         }
-        return list;
+        return temp;
     }
 }

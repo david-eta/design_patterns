@@ -15,22 +15,23 @@ public class BubbleSort implements SortBehavior {
     public ArrayList<String> sort(ArrayList<String> list) {
 
         String temp;
+        ArrayList<String> temp_list = list;
         boolean sorted = false;
     
         while (!sorted) {
             sorted = true;
-            for (int i = 0; i < list.size()-1; i++) {
-                for(int j=0; j < list.size()-2; j++) {
+            for (int i = 0; i < temp_list.size()-1; i++) {
+                for(int j=0; j < temp_list.size()-2; j++) {
                 }
-                if (list.get(i).compareTo(list.get(i + 1)) > 0) {
-                    temp = list.get(i);
-                    list.set(i, list.get(i + 1));
-                    list.set(i + 1, temp);
+                if (temp_list.get(i).compareTo(temp_list.get(i + 1)) > 0) {
+                    temp = temp_list.get(i);
+                    temp_list.set(i, temp_list.get(i + 1));
+                    temp_list.set(i + 1, temp);
                     sorted = false;
                 }
             }
         }
 
-        return list;
+        return temp_list;
     }
 }
