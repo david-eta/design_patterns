@@ -9,11 +9,11 @@ class RandomCasing extends PasswordDecorator {
 	}
 
 	public String getPassword() {
-		changeCase(password);
+		changeCase();
 		return password;
 	}
 
-	private void changeCase(String password) {
+	private void changeCase() {
 
         for (int i = 0; i < password.length(); i++) {
 

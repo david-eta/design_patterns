@@ -3,18 +3,18 @@ import java.util.Random;
 
 class SpecialChars extends PasswordDecorator {	
     private String password;
-    
+
 	public SpecialChars(Password passwordBeginning) {
 		super(passwordBeginning);
         this.password = passwordBeginning.getPassword();
 	}
 
 	public String getPassword() {
-		changeCase(password);
+		changeCase();
         return password;	
 	}
 
-	private void changeCase(String password) {
+	private void changeCase() {
         
         int i = 0;
     
