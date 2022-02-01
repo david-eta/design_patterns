@@ -5,8 +5,7 @@ public class Symbols extends PasswordDecorator {
 
 	public Symbols(Password passwordBeginning) {
 		super(passwordBeginning);
-		this.password = passwordBeginning.getPassword();
-		
+		this.password = passwordBeginning.getPassword();	
 	}
 
 	public String getPassword() {
@@ -30,12 +29,11 @@ public class Symbols extends PasswordDecorator {
         for (int i = 0; i < password.length(); i++) {
  
 			String my_char = Character.toString(password.charAt(i));
-			char symbol = my_dict.get(my_char).charAt(0);
 
-			if (my_dict.get(my_char) == null) 
-				continue;
-			else 
+			if(my_dict.get(my_char) != null){
+				char symbol = my_dict.get(my_char).charAt(0);
 				password = password.substring(0, i) + symbol + password.substring(i+1);		
+			}
         }
     }
 	

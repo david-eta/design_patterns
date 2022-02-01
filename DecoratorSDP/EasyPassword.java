@@ -14,9 +14,9 @@ public class EasyPassword extends Password {
     private String makeEasy(String phrase) {
         phrase = phrase.replaceAll("\\s", ""); // removes all spaces in phrase
 
-        // generates a random number between 0 and 99
+        // generates a random number between 0 and 100
         Random rand = new Random();
-        int num = rand.nextInt(100); 
+        int num = rand.nextInt(101); 
 
         phrase = phrase + num; // concatenates the number to the phrase
         

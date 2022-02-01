@@ -2,33 +2,32 @@
 import java.util.Random;
 
 class SpecialChars extends PasswordDecorator {	
-
+    private String password;
+    
 	public SpecialChars(Password passwordBeginning) {
 		super(passwordBeginning);
+        this.password = passwordBeginning.getPassword();
 	}
 
 	public String getPassword() {
 		changeCase(password);
-		return password;
+        return password;	
 	}
 
 	private void changeCase(String password) {
-
-        for (int i = 0; i < password.length(); i++) {
-
+        
+        int i = 0;
+    
+        while (i < password.length()) {
             int ascii = (int) password.charAt(i);
-            if (ascii < 97 || ascii > 122) 
-                continue;
-            else {
-                int x = new Random().nextInt(3); // generates either from 0 to 8
 
-                if (x != 0 | x != 1 || x != 2) // 30% chance of x not being either of these
-                    continue;
-                else
+            if (ascii > 96 && ascii < 123) {
+                int x = new Random().nextInt(9); // generates 1 of 9 digits (0-8) 
+                if (x < 3)  // 30% chance of nothing happening
                     password = password.substring(0, i) + popRandom() + password.substring(i);
             }
+            i++;
         }
-
     }
 	
     private char popRandom() {
