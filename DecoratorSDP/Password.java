@@ -1,5 +1,9 @@
 
-
+/**
+ * Class that parents the simplest version of a password.
+ * @author David Eta
+ * 
+ */
 
 public abstract class Password {
 	/**
@@ -10,7 +14,4 @@ public abstract class Password {
 	public String getPassword() {
 		return password;
 	}
-	
-	//public abstract double getCost();
-	
 }
