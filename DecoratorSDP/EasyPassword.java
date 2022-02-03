@@ -3,11 +3,10 @@ import java.util.Random;
 public class EasyPassword extends Password {
 
 	public EasyPassword(String phrase) {
-		this.password = phrase;
+		this.password = makeEasy(phrase);
 	}
 	
 	public String getPassword() {
-        password = makeEasy(password);
 		return password;
     }
 
