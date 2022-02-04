@@ -2,11 +2,12 @@ public class SedanCar extends Car {
 
     public SedanCar (String make, String model) {
         super(make, model);
+        System.out.println("Creating a " + make + " " + model);
         assemble();
     }
 
     protected void addFrame() {
-        System.out.println("Adding a three part frame...");
+        System.out.println("Adding a three part frame");
     }
     
     protected void addAccessories() {

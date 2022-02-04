@@ -24,15 +24,15 @@ public abstract class Car {
     protected abstract void addFrame();
 
     protected void addWheels() {
-        System.out.println("Adding the wheels...");
+        System.out.println("Adding the Wheels");
     }
     
     protected void addEngine() {
-        System.out.println("Adding a standard engine...");
+        System.out.println("Adding a Standard Engine");
     }
     
     protected void addWindows() {
-        System.out.println("Adding windows...");
+        System.out.println("Adding Windows");
     }
     
     protected abstract void addAccessories();

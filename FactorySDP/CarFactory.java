@@ -17,8 +17,6 @@ public class CarFactory extends Car {
         } else {
             car = new SmallCar(make, model); // default
         }
-
-        System.out.print("Creating a " + make + " " + model);
         return car;
     }
 
