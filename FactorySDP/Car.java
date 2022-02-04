@@ -38,10 +38,11 @@ public abstract class Car {
     protected abstract void addAccessories();
 
     protected void displayAccessories() {
-        System.out.println("Accessories:\n");
+        System.out.println("Accessories:");
         for (int i = 0; i < accessories.size(); i++) {
-            System.out.println("- " + accessories.get(i) + "\n");
+            System.out.println("- " + accessories.get(i));
         }
+        System.out.println();
     }
     
 }

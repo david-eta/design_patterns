@@ -3,10 +3,11 @@ public class SmallCar extends Car {
 
     public SmallCar (String make, String model) {
         super(make, model);
+        assemble();
     }
 
     protected void addFrame() {
-        System.out.println("Adding a small frame");
+        System.out.println("Adding a small frame...");
     }
     
     protected void addAccessories() {
