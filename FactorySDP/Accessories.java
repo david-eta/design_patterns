@@ -1,3 +1,8 @@
+/**
+ * A list of the different accessories available to cars.
+ * @author David Eta
+ * 
+ */
 enum Accessories {
     SPORTS_SEATS,
     WINDOW_TINT,
