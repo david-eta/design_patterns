@@ -26,6 +26,7 @@ public class Exercise {
 
     public String toString() {
         
+        
         String muscles = "Muscles: ";
         for (int i = 0; i < targetMuscles.size(); i++) {
             if (i == targetMuscles.size()-1)
@@ -38,7 +39,7 @@ public class Exercise {
         for (String direction: directions)
             dirs = dirs + "- " + direction + "\n";
         
-        String ret = muscles + "\n" + dirs;
+        String ret = "... " + title + " ...\n" + muscles + "\n" + dirs;
         
         return ret;
     }
