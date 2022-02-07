@@ -39,7 +39,7 @@ public class Exercise {
         for (String direction: directions)
             dirs = dirs + "- " + direction + "\n";
         
-        String ret = "... " + title + " ...\n" + muscles + "\n" + dirs;
+        String ret = "\n... " + title + " ...\n" + muscles + "\n" + dirs;
         
         return ret;
     }

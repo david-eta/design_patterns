@@ -9,7 +9,6 @@ public class ExerciseIterator implements Iterator {
 
     public Boolean hasNext() {
         if (position < exercises.length-1) {
-            position = position+1;
             return true;
         }
         return false;
@@ -17,8 +16,10 @@ public class ExerciseIterator implements Iterator {
 
     public Exercise next() {
         if (hasNext()) {
-            return exercises[position];
+            position += 1;
+            return exercises[position-1];
         }
-        return null;
+        else
+            return null;
     }   
 }

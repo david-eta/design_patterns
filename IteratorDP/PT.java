@@ -53,7 +53,7 @@ public class PT {
     }
     
     public String toString() {
-        String ret = firstName + " " + lastName + "\n" + bio + "\n\n";
+        String ret = firstName + " " + lastName + "\n" + bio + "\n";
         return ret;
     }
 
