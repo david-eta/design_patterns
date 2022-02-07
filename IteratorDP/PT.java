@@ -1,3 +1,8 @@
+/**
+ * Initialises a physical therapist and all their characteristics.
+ * @author David Eta
+ * 
+ */
 import java.util.ArrayList;
 
 public class PT {
@@ -9,6 +14,10 @@ public class PT {
     private String bio;
     private Exercise[] exercises;
 
+    /**
+     * initialises the physical therapist and the exercises they offer.
+     * @param details the first name, last name and a bit about the PT.
+     */
     public PT(String firstName, String lastName, String bio) {
 
         exercises = new Exercise[max_size];
@@ -17,10 +26,13 @@ public class PT {
         this.bio = bio;
     }
 
+    /**
+     * adds an exercise to the list of exercises. If the list of exercises has reached its limit, it is expanded by calling the respective function
+     * @param details entails of the name of the exercise, muscles involved and steps to do it.
+     */
     public void addExercise(String title, ArrayList<String> muscleGroups, ArrayList<String> directions) {
 
-        Exercise exercise = new Exercise(title, muscleGroups, directions);
-        
+        Exercise exercise = new Exercise(title, muscleGroups, directions); 
         if (x >= max_size) {
             exercises = growArray(exercises);
             max_size = exercises.length;
@@ -41,6 +53,10 @@ public class PT {
         return bio;
     }
     
+    /**
+     * if the list of exercises has reached its limit, its size is doubled.
+     * @param details list of exercises.
+     */
     public Exercise[] growArray(Exercise[] exercises) {
         Exercise[] temp = new Exercise[2 * exercises.length];
         System.arraycopy(exercises, 0, temp, 0, exercises.length);
