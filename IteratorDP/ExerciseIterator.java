@@ -21,9 +21,8 @@ public class ExerciseIterator implements Iterator {
      * @return true or false 
      */
     public Boolean hasNext() {
-        if (position < exercises.length-1) {
+        if (position < exercises.length-1) 
             return true;
-        }
         return false;
     }
 
@@ -32,11 +31,9 @@ public class ExerciseIterator implements Iterator {
      * @returns an exercise.
      */
     public Exercise next() {
-        if (hasNext()) {
-            position += 1;
-            return exercises[position-1];
-        }
-        else
+        if (!hasNext()) 
             return null;
+        position += 1;
+        return exercises[position-1];
     }   
 }
