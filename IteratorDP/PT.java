@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class PT {
     
     int max_size = 2;
-    int x = 0; // number of items
     private String firstName;
     private String lastName;
     private String bio;
     private Exercise[] exercises;
+    private int numExercises;
 
     /**
      * initialises the physical therapist and the exercises they offer.
@@ -24,6 +24,7 @@ public class PT {
         this.firstName = firstName;
         this.lastName = lastName;
         this.bio = bio;
+        numExercises = 0;
     }
 
     /**
@@ -33,12 +34,12 @@ public class PT {
     public void addExercise(String title, ArrayList<String> muscleGroups, ArrayList<String> directions) {
 
         Exercise exercise = new Exercise(title, muscleGroups, directions); 
-        if (x >= max_size) {
+        if (numExercises >= max_size) {
             exercises = growArray(exercises);
             max_size = exercises.length;
         }
-        exercises[x] = exercise;
-        x += 1; 
+        exercises[numExercises] = exercise;
+        numExercises += 1; 
     }
     
     public String getFirstName() {
