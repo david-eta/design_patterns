@@ -1,3 +1,5 @@
+package FactorySDP;
+
 /**
  * Creates a sedan car
  * @author David Eta

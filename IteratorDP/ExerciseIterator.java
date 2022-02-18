@@ -1,3 +1,5 @@
+package IteratorDP;
+
 /**
  * Takes an array of exercises and iterates through them to return an exercise if there are more.
  * @author David Eta

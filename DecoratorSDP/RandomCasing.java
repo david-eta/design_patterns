@@ -1,4 +1,5 @@
-import java.util.Random;
+package DecoratorSDP;import java.util.Random;
+
 
 /**
  * Changes the case of each letter 50% of the time

@@ -1,3 +1,5 @@
+package FactorySDP;
+
 /**
  * A list of the different types of cars that can be created.
  * @author David Eta

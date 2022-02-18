@@ -1,4 +1,4 @@
-
+package DecoratorSDP;
 /**
  * Class that parents the simplest version of a password.
  * @author David Eta

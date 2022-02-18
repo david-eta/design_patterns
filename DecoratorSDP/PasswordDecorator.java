@@ -1,3 +1,4 @@
+package DecoratorSDP;
 /**
  * Abstract class that parents different ways to strengthen password
  * @author David Eta

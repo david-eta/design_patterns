@@ -1,3 +1,5 @@
+package FactorySDP;
+
 /**
  * Creates a small car
  * @author David Eta

@@ -1,3 +1,5 @@
+package IteratorDP;
+
 /**
  * Initialises a physical therapist and all their characteristics.
  * @author David Eta

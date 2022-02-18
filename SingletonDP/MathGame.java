@@ -1,7 +1,79 @@
-public static class MathGame {
+import java.util.Scanner;
+import java.util.Random;
+
+public class MathGame {
     
     private int score;
-    private Random rand;
-    private Scanner reader;
-    private String[] operands;
+    private Random rand = new Random();
+    private Scanner reader = new Scanner(System.in);
+    private String[] operands = {"+", "-", "*", "/"};
+    private static MathGame mathGame;
+
+
+    public static MathGame getInstance() {
+        if (mathGame == null) {
+        System.out.println("Let's have fun with Math!");
+        mathGame = new MathGame();
+        }
+        return mathGame;
+    }
+
+    public void play() {
+        String input;
+        boolean result;
+        while (true) {
+            System.out.print("(P)lay or (Q)uit: ");
+            input = reader.nextLine();  // p or q
+            System.out.println("Value of input is " + input);
+            
+
+            if (input.toLowerCase().equals("p")) {
+                result = mathGame.playRound();
+                if (result == true)
+                   score += 1;
+                continue;
+            }
+            else if (input.toLowerCase().equals("q")) {
+                System.out.println("You won " + score + " game(s)!");
+                break;
+            }
+            System.out.println("Sorry, you must enter p or q"); 
+        }
+    }
+
+    private boolean playRound() {
+
+        int index = rand.nextInt(operands.length);
+        String operand = operands[index];
+
+        int num1 = rand.nextInt(100);
+        int num2 = rand.nextInt(100);
+
+        System.out.println("Round answer to 1 decimal place");
+        System.out.printf("%d %s %d = ", num1, operand, num2);
+        double userAnswer = reader.nextDouble();
+        double realAnswer = roundIt(getAnswer(operand, num1, num2));
+
+        if (userAnswer == realAnswer) {
+            System.out.println("You got it!");
+            return true;
+        }
+        System.out.println("The correct answer is: " + realAnswer);
+        return false;
+    }
+
+    private double getAnswer(String operand, int num1, int num2) {
+        if (operand == "+")
+            return num1 + num2;
+        else if (operand == "-")
+            return num1 - num2;
+        else if (operand == "*")
+            return num1 * num2;
+        else
+            return num1 / num2;
+    }
+
+    private static double roundIt(double value) {
+        return Math.round(value*100)/100;
+    }
 }
