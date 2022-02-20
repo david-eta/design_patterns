@@ -1,6 +1,13 @@
+
 import java.util.Scanner;
 import java.util.Random;
 
+
+/**
+ * Runs a math game.
+ * @author David Eta
+ * 
+ */
 public class MathGame {
     
     private int score;
@@ -10,6 +17,10 @@ public class MathGame {
     private static MathGame mathGame;
 
 
+    /**
+     * initialises a MathGame or calls the currently active one.
+     * @return an instance of a game.
+     */
     public static MathGame getInstance() {
         if (mathGame == null) {
         System.out.println("Let's have fun with Math!");
@@ -18,6 +29,10 @@ public class MathGame {
         return mathGame;
     }
 
+    /**
+     * Starts new rounds or ends the game depending on user input. 
+     * Tallys the user's score.
+     */
     public void play() {
         String input;
         boolean result;
@@ -41,6 +56,10 @@ public class MathGame {
         }
     }
 
+    /**
+     * Generates an arithmetic problem, and checks if the user returns the right answer to it.
+     * @return if the user returned the right answer or not.
+     */
     private boolean playRound() {
 
         int index = rand.nextInt(operands.length);
@@ -62,6 +81,10 @@ public class MathGame {
         return false;
     }
 
+    /**
+     * solves the randomly-generated arithmetic problem.
+     * @return returns the correct answer.
+     */
     private double getAnswer(String operand, int num1, int num2) {
         if (operand == "+")
             return num1 + num2;
@@ -73,6 +96,9 @@ public class MathGame {
             return num1 / num2;
     }
 
+    /**
+     * @return the parameter rounded to one decimal place
+     */
     private static double roundIt(double value) {
         return Math.round(value*100)/100;
     }
