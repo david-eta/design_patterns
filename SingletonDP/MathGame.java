@@ -38,8 +38,8 @@ public class MathGame {
         boolean result;
         while (true) {
             System.out.print("(P)lay or (Q)uit: ");
-            input = reader.nextLine();  // p or q
-            System.out.println("Value of input is " + input);
+            input = reader.next();  // p or q
+            System.out.print("");
             
 
             if (input.toLowerCase().equals("p")) {
