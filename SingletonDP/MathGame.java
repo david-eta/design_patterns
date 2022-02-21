@@ -71,7 +71,7 @@ public class MathGame {
         System.out.println("Round answer to 1 decimal place");
         System.out.printf("%d %s %d = ", num1, operand, num2);
         double userAnswer = reader.nextDouble();
-        double realAnswer = roundIt(getAnswer(operand, num1, num2));
+        double realAnswer = getAnswer(operand, num1, num2);
 
         if (userAnswer == realAnswer) {
             System.out.println("You got it!");
@@ -93,13 +93,6 @@ public class MathGame {
         else if (operand == "*")
             return num1 * num2;
         else
-            return num1 / num2;
-    }
-
-    /**
-     * @return the parameter rounded to one decimal place
-     */
-    private static double roundIt(double value) {
-        return Math.round(value*100)/100;
+            return Math.round(((double)num1 / num2) * 10) / 10.0;
     }
 }
