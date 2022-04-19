@@ -10,7 +10,6 @@ import java.util.HashMap;
 public class JukeBox {
 
     private HashMap<String, Song> songs = new HashMap<String, Song>();
-    private int currentSong;
 
     /**
      * Creates an instance of a Jukebox.
