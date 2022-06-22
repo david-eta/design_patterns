@@ -1,5 +1,7 @@
+package CommandDP;
+
 /**
- * @author Tommy Ecker
+ * @author David Eta
  */
 public class JumpCommand implements Command {
     private Player player;

@@ -1,3 +1,5 @@
+package CommandDP;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -5,9 +7,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author David Eta
- * @author Christina Desmangles
- * @author Tommy Ecker
- * @author Max Strickland
  */
 public class Player {
 

@@ -1,3 +1,5 @@
+package CommandDP;
+
 public class RunCommand implements Command{
     private Player player;
 

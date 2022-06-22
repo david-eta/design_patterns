@@ -1,6 +1,8 @@
+package CommandDP;
+
 /**
  * Class to initialize and execute fire command
- * @author Christina Desmangles
+ * @author David Eta
  */
 public class FireCommand implements Command{
     private Player player;
